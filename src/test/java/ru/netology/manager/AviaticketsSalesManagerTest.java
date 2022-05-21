@@ -13,8 +13,8 @@ public class AviaticketsSalesManagerTest {
     private AviaticketsSalesManager manager = new AviaticketsSalesManager(repository);
     private AviaticketsSales first = new AviaticketsSales(1, 31000, "KUF", "BEG", 200);
     private AviaticketsSales second = new AviaticketsSales(2, 48100, "KUF", "TIA", 200);
-    private AviaticketsSales third = new AviaticketsSales(3, 29865, "KUF", "SKP", 210);
-    private AviaticketsSales fourth = new AviaticketsSales(3, 32000, "KUF", "SKP", 200);
+    private AviaticketsSales third = new AviaticketsSales(3, 29865, "KUF", "SKP", 200);
+    private AviaticketsSales fourth = new AviaticketsSales(3, 32000, "KUF", "SKP", 210);
 
     @BeforeEach
     public void setUp() {
