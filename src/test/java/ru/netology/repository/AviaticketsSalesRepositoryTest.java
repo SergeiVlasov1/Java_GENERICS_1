@@ -36,7 +36,7 @@ public class AviaticketsSalesRepositoryTest {
 
     @Test
     public void shouldFindByIdIfNotExist() {
-        int idToFind = 4;
+        int idToFind = 5;
         AviaticketsSales expected = null;
         AviaticketsSales actual = repository.findById(idToFind);
         assertEquals(expected, actual);
@@ -53,7 +53,7 @@ public class AviaticketsSalesRepositoryTest {
 
     @Test
     public void shouldNotRemoveByIdIfNotExist() {
-        int removeId = 4;
+        int removeId = 5;
         assertThrows(NotFoundException.class, () -> repository.removeById(removeId));
     }
 }
