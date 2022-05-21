@@ -14,7 +14,7 @@ public class AviaticketsSalesTest {
 
     @Test
     public void shouldSortTicketsByPrice() {
-        AviaticketsSales[] expected = new AviaticketsSales[]{second, first, third};
+        AviaticketsSales[] expected = new AviaticketsSales[]{third, first, second};
         AviaticketsSales[] actual = new AviaticketsSales[]{first, second, third};
 
         Arrays.sort(actual);

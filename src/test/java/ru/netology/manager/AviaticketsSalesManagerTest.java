@@ -13,6 +13,7 @@ public class AviaticketsSalesManagerTest {
     private AviaticketsSales first = new AviaticketsSales(1, 31000, "KUF", "BEG", 200);
     private AviaticketsSales second = new AviaticketsSales(2, 48100, "KUF", "TIA", 200);
     private AviaticketsSales third = new AviaticketsSales(3, 29865, "KUF", "SKP", 200);
+    private AviaticketsSales fourth = new AviaticketsSales(3, 32000, "KUF", "SKP", 200);
 
     @BeforeEach
     public void setUp() {
@@ -33,7 +34,7 @@ public class AviaticketsSalesManagerTest {
     public void shouldFindTicketIfContained() {
         manager.add(first);
         AviaticketsSales[] expected = new AviaticketsSales[]{first};
-        AviaticketsSales[] actual = manager.findAll("DME", "AYT");
+        AviaticketsSales[] actual = manager.findAll("KUF", "BEG");
         assertArrayEquals(expected, actual);
     }
 
@@ -42,8 +43,9 @@ public class AviaticketsSalesManagerTest {
         manager.add(first);
         manager.add(second);
         manager.add(third);
-        AviaticketsSales[] expected = new AviaticketsSales[]{second, first};
-        AviaticketsSales[] actual = manager.findAll("DME", "AYT");
+        manager.add(fourth);
+        AviaticketsSales[] expected = new AviaticketsSales[]{third, fourth};
+        AviaticketsSales[] actual = manager.findAll("KUF", "SKP");
         assertArrayEquals(expected, actual);
     }
 
